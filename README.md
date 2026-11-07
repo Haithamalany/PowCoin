@@ -1,6 +1,6 @@
 # PowCoin
 
-PowCoin is an academic teaching project for explaining blockchain concepts to students. Its Python proof-of-work cryptocurrency demonstrates full-node validation, encrypted Ed25519 wallets, signed account transfers, CPU mining, SQLite persistence, a browser explorer, and peer synchronization. It is experimental software; do not use it for real funds or expose its HTTP API to the public Internet.
+PowCoin is an academic teaching project for explaining blockchain concepts and security threats to students. Its Python proof-of-work cryptocurrency demonstrates full-node validation, encrypted Ed25519 wallets, signed account transfers, CPU mining, SQLite persistence, a browser explorer, and peer synchronization. It deliberately retains vulnerable design choices for security analysis in a controlled classroom setting. Do not use it for real funds or expose its HTTP API to the public Internet.
 
 ## What is here
 
@@ -40,6 +40,10 @@ The desktop app needs a configured token even for the classroom localhost exerci
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
+
+## Security learning purpose
+
+PowCoin intentionally includes security weaknesses so students can study blockchain threats and evaluate defenses. Examples include a shared group API token, HTTP without built-in TLS, and fixed mining difficulty. Treat the project as a controlled lab exercise, not a secure cryptocurrency or production service. The [student manual](docs/PowCoin_Student_Manual.pdf) and [protocol reference](docs/PROTOCOL.md) explain the design and its limits.
 
 ## Privacy and scope
 

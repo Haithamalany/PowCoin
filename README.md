@@ -1,6 +1,6 @@
 # PowCoin Student Starter
 
-PowCoin is an educational proof-of-work cryptocurrency written in Python. The project demonstrates full-node validation, encrypted Ed25519 wallets, signed account transfers, CPU mining, SQLite persistence, a browser explorer, and peer synchronization. It is experimental software; do not use it for real funds or expose its HTTP API to the public Internet.
+PowCoin is an academic teaching project for explaining blockchain concepts to students. Its Python proof-of-work cryptocurrency demonstrates full-node validation, encrypted Ed25519 wallets, signed account transfers, CPU mining, SQLite persistence, a browser explorer, and peer synchronization. It is experimental software; do not use it for real funds or expose its HTTP API to the public Internet.
 
 ## What is here
 

@@ -1,4 +1,4 @@
-# PowCoin Student Starter
+# PowCoin
 
 PowCoin is an academic teaching project for explaining blockchain concepts to students. Its Python proof-of-work cryptocurrency demonstrates full-node validation, encrypted Ed25519 wallets, signed account transfers, CPU mining, SQLite persistence, a browser explorer, and peer synchronization. It is experimental software; do not use it for real funds or expose its HTTP API to the public Internet.
 

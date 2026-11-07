@@ -68,7 +68,7 @@ PowCoin intentionally includes security weaknesses so students can study blockch
 
 ## Privacy and scope
 
-This repository contains no instructor wallets, passwords, shared token, SSH key, or live node database. Running the exercises creates **new private files** on your machine. Keep wallet `.pem` files, `*-password.txt` sidecars, token files, and node data out of commits and shared archives. `.gitignore` helps with common paths but does not remove secrets already committed to Git history.
+Running the exercises creates **new private files** on your machine. Keep wallet `.pem` files, `*-password.txt` sidecars, token files, and node data out of commits and shared archives. `.gitignore` helps with common paths but does not remove secrets already committed to Git history.
 
 The implementation has fixed mining difficulty and is intended for learning, not production use. See the manual and protocol reference for its limits.
 

@@ -33,7 +33,28 @@ Leave the node running. In a second PowerShell terminal, from the same folder:
 
 Open `http://127.0.0.1:8844/` for the browser explorer. Use `Ctrl+C` to stop the node. For Linux or macOS, create a virtual environment with `python3 -m venv .venv`, use `.venv/bin/python`, and run the same `powcoin` commands.
 
-The desktop app needs a configured token even for the classroom localhost exercise. The manual shows how to create that token and launch the app. Run `python -m powcoin --help` for the full command list.
+Run `python -m powcoin --help` for the full command list.
+
+## Launch the wallet and mining interface
+
+The desktop app needs a token file, even when the node runs only on your computer. First stop the node from the quick start with `Ctrl+C`. In that node terminal, create a token once and restart the **same** local chain with it:
+
+```powershell
+New-Item -ItemType Directory -Force .deploy | Out-Null
+if (-not (Test-Path .deploy/shared_token)) {
+    .\.venv\Scripts\python.exe -m powcoin token | Set-Content -NoNewline .deploy/shared_token
+}
+$env:POWCOIN_TOKEN = (Get-Content .deploy/shared_token -Raw).Trim()
+.\.venv\Scripts\python.exe -m powcoin node --config network.json --data data/student --host 127.0.0.1 --port 8844
+```
+
+Leave the node running. In a second PowerShell terminal, from this repository folder, launch the interface:
+
+```powershell
+.\.venv\Scripts\python.exe -m powcoin.desktop --config network.json --node-url http://127.0.0.1:8844 --token-file .deploy/shared_token
+```
+
+The **PowCoin Wallet and Mining** window lets you create or open a wallet, view balances, send signed transfers, and mine blocks to a reward address. Tkinter must be available in your Python installation. Keep the generated token and any wallet PEM/password files private. The [student manual](docs/PowCoin_Student_Manual.pdf) walks through the interface and the underlying transactions.
 
 ## Tests
 

@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.egg-info/
+build/
+dist/
+data/
+*.pem
+*-password.txt
+*-address.txt
+wallets/
+network.json
+custom-network.json
+*.sqlite3*
+.deploy/
+# Additional locally generated credentials and OS files
+.env
+.env.*
+*.key
+*.p12
+*.pfx
+*-token.txt
+token.txt
+shared_token
+.DS_Store
+Thumbs.db
